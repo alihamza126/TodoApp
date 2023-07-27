@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg,#e4893e,#e9343e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.todo{
+    width: 370px;
+    height: auto;
+    background:whitesmoke;
+    padding: 44px 22px;
+    border-radius: 12px;
+ 
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    height: 38px;
+    width: 100%;
+    background-color: rgb(212, 212, 212);
+    justify-content: space-between;
+    border-radius: 32px;
+    margin-bottom: 12px;
+}
+.row input{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 8px 18px;
+    background-color: #e9343e;
+    border-radius: 32px;
+    color: aliceblue;
+    transition: background-color .2s ease;
+    margin-right: 0;
+}
+.row button:hover{
+    background-color: #e4893e;
+}
+
+.todolist{
+    padding-left: 12px 10px;
+}
+
+.todo ul li{
+    list-style: none;
+    margin-left: 12px;
+    margin: 5px 0px;
+    padding:10px 8px 10px 50px;
+    user-select: none;
+    background-color: rgb(212, 212, 212);
+    border-radius: 22px;
+    position: relative;
+   
+}
+
+.todo ul li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left:9px;
+    border-radius: 50%;
+    background-image: url(./checkded.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+  
+}
+.todo ul li.checked::before{
+    background-image: url(./uncheck-icon-17.jpg);
+}
+.todo ul li.checked{
+    text-decoration: line-through;
+}
+.todo ul li span{
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    padding-bottom: 30px;
+    margin-top: 4px;
+    font-size: 26px;
+}
+.todo ul li span:hover{
+    background-color: #a02c2ce0;
+    color: antiquewhite;
+}
